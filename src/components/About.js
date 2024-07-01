@@ -20,7 +20,7 @@ const About = () => {
                 <h2>About Me</h2>
                 <p>I am a passionate web and app developer with expertise in building modern, responsive web applications using React, and mobile applications for both Android and iOS platforms.</p>
                 <p>My goal is to create valuable digital experiences that solve real-world problems and bring joy to users.</p>
-                <a href="#contact" className="btn btn-primary">Contact Me</a>
+                {/* <a href="#contact" className="btn btn-primary">Resume</a> */}
               </div>
             </div>
             <div className="col-lg-6">

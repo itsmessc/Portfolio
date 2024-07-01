@@ -19,14 +19,32 @@ const ContactForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(formData); // Handle form submission logic here
-        // You can add logic to submit the form data to a backend or process it further
+        console.log(formData); // Log form data for testing
+        // Handle form submission logic here (e.g., submit to FormBold endpoint)
+        const form = e.target;
+        const formDataToSend = new FormData(form);
+
+        fetch('https://formbold.com/s/oyDZA', {
+            method: 'POST',
+            body: formDataToSend
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            console.log('Form submitted successfully');
+            // Add logic here to handle success (e.g., show success message)
+        })
+        .catch(error => {
+            console.error('Error submitting form:', error);
+            // Add logic here to handle error (e.g., show error message)
+        });
     };
 
     return (
         <div className="container contact-form" id='contact'>
             <h2>Contact</h2>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} action='https://formbold.com/s/oyDZA' method='POST' encType="multipart/form-data">
                 <div className="mb-3">
                     <label htmlFor="name" className="form-label">Name</label>
                     <input type="text" className="form-control" id="name" name="name" value={formData.name} onChange={handleChange} required />
