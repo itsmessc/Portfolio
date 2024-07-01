@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './ContactForm.css'; // Import your custom CSS for dark theme styling
+import { Alert } from 'react-bootstrap';
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
         description: ''
+    });
+    const [submitStatus, setSubmitStatus] = useState({
+        submitted: false,
+        error: false,
     });
 
     const handleChange = (e) => {
@@ -19,7 +24,6 @@ const ContactForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(formData); // Log form data for testing
         // Handle form submission logic here (e.g., submit to FormBold endpoint)
         const form = e.target;
         const formDataToSend = new FormData(form);
@@ -33,17 +37,38 @@ const ContactForm = () => {
                 throw new Error('Network response was not ok');
             }
             console.log('Form submitted successfully');
-            // Add logic here to handle success (e.g., show success message)
+            setSubmitStatus({
+                submitted: true,
+                error: false,
+            });
+            setFormData({
+                name: '',
+                email: '',
+                description: '',
+            });
         })
         .catch(error => {
             console.error('Error submitting form:', error);
-            // Add logic here to handle error (e.g., show error message)
+            setSubmitStatus({
+                submitted: true,
+                error: true,
+            });
         });
     };
 
     return (
         <div className="container contact-form" id='contact'>
             <h2>Contact</h2>
+            {submitStatus.submitted && !submitStatus.error && (
+                <Alert variant="success" onClose={() => setSubmitStatus({ submitted: false, error: false })} dismissible>
+                    Form submitted successfully!
+                </Alert>
+            )}
+            {submitStatus.submitted && submitStatus.error && (
+                <Alert variant="danger" onClose={() => setSubmitStatus({ submitted: false, error: false })} dismissible>
+                    Error submitting form. Please try again later.
+                </Alert>
+            )}
             <form onSubmit={handleSubmit} action='https://formbold.com/s/oyDZA' method='POST' encType="multipart/form-data">
                 <div className="mb-3">
                     <label htmlFor="name" className="form-label">Name</label>
