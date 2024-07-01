@@ -8,6 +8,17 @@ body {
 body::-webkit-scrollbar {
     width: 5px; /* width of the entire scrollbar */
 }
+.navbar {
+    display: none;
+    position: fixed;
+}
+.navbar-nav .nav-link  {
+    cursor: pointer; /* Custom cursor style for ScrollLink */
+}
+.navbar-brand{
+    cursor: pointer;
+}
+
 
 /* Handle */
 body::-webkit-scrollbar-thumb {

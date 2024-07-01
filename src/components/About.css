@@ -12,7 +12,9 @@ body {
     background-color: #000000; /* Dark background color */
     color: #ffffff; /* Light text color */
   }
-  
+  .dark-theme{
+    margin-bottom: 70px;
+  }
   .dark-theme .btn-primary {
     background-color: #007bff; /* Primary button background color */
     border-color: #007bff; /* Primary button border color */

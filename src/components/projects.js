@@ -44,7 +44,7 @@ export default function Project() {
     };
 
     return (
-        <div className="timeline-container dark-theme">
+        <div className="timeline-container dark-theme" id='projects'>
             <h1 className="title">Projects</h1>
 
             <VerticalTimeline animate={true} >

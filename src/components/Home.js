@@ -17,7 +17,7 @@ const Home = () => {
     }, []);
 
     return (
-        <div className="home-container">
+        <div className="home-container" id='home'>
             <div className="hero-section">
                 <div className="hero-content">
                     <h1 className="hero-title">Hi, I'm <span className="highlight">{text}</span></h1>
