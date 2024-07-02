@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Home.css';
 import { Link as ScrollLink } from 'react-scroll';
+import './meteor.scss'
 
 const Home = () => {
     const ref = useRef(0);
@@ -40,6 +41,22 @@ const Home = () => {
                     <p className="hero-description">I specialize as a full-stack web and app developer.</p>
                 </div>
             </div>
+            <div class="star"></div>
+            <div class="meteor-1"></div>
+            <div class="meteor-2"></div>
+            <div class="meteor-3"></div>
+            <div class="meteor-4"></div>
+            <div class="meteor-5"></div>
+            <div class="meteor-6"></div>
+            <div class="meteor-7"></div>
+            <div class="meteor-8"></div>
+            <div class="meteor-9"></div>
+            <div class="meteor-10"></div>
+            <div class="meteor-11"></div>
+            <div class="meteor-12"></div>
+            <div class="meteor-13"></div>
+            <div class="meteor-14"></div>
+            <div class="meteor-15"></div>
             {showArrows && (
                 <ScrollLink to="about1" duration={500} delay={0} offset={-90}>
                     <svg className="arrows">
