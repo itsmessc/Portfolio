@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './ContactForm.css'; // Import your custom CSS for dark theme styling
+import './ContactForm.css'; 
 import { Alert } from 'react-bootstrap';
 
 const ContactForm = () => {
@@ -24,7 +24,7 @@ const ContactForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Handle form submission logic here (e.g., submit to FormBold endpoint)
+        // Handle form submission logic here 
         const form = e.target;
         const formDataToSend = new FormData(form);
 
@@ -58,7 +58,7 @@ const ContactForm = () => {
 
     return (
         <div className="container contact-form" id='contact'>
-            <h2>Contact</h2>
+            <h2>Contact Me</h2>
             {submitStatus.submitted && !submitStatus.error && (
                 <Alert variant="success" onClose={() => setSubmitStatus({ submitted: false, error: false })} dismissible>
                     Form submitted successfully!
@@ -79,7 +79,7 @@ const ContactForm = () => {
                     <input type="email" className="form-control" id="email" name="email" value={formData.email} onChange={handleChange} required />
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="description" className="form-label">Description</label>
+                    <label htmlFor="description" className="form-label">Message</label>
                     <textarea className="form-control" id="description" name="description" rows="3" value={formData.description} onChange={handleChange} required></textarea>
                 </div>
                 <button type="submit" className="btn btn-primary">Submit</button>

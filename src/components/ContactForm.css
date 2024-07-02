@@ -12,6 +12,11 @@
 
 .contact-form h2 {
     text-align: center;
+        background: #0237FF;
+    background: linear-gradient(to bottom right, #0237FF 4%, #FF7672 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
 }
 
 .form-control {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './projects.css'; // Import your CSS file
+import './projects.css'; 
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
@@ -7,30 +7,29 @@ import 'react-vertical-timeline-component/style.min.css';
 export default function Project() {
     const [hoveredProject, setHoveredProject] = useState(null);
 
-    // Sample project data
+   
     const projects = [
         {
             name: 'Expense Tracker',
             description: 'Developed a Flutter app with Firebase for tracking expenses and managing budgets. Features include intuitive UI, PIN security, dark theme, notifications, cloud sync, and a Recycle Bin for deleted items.',
             technologies: 'Technologies used: Dart, Flutter, Firebase',
             duration: '02/2024 - 03/2024',
-            link: 'https://github.com/saicharan1342/Expense-tracker' // Example link URL
+            link: 'https://github.com/saicharan1342/Expense-tracker' 
         },
         {
             name: 'Hospital Management System',
             description: 'Developed a robust hospital management website using HTML, CSS, Node.js, Express, and PostgreSQL to optimize administrative processes and improve patient care delivery.',
             technologies: 'Technologies used: HTML, CSS, Node.js, Express.js, PostgreSQL, RESTful APIs',
             duration: '03/2024 - 04/2024',
-            link: 'https://github.com/itsmessc/HMS'
+            link: 'https://github.com/itsmessc/HMS',
         },
         {
             name: 'Restaurant Food Ordering App',
             description: 'Currently spearheading the development of a cutting-edge mobile application using React Native, complemented by a robust backend powered by Node.js, Express, and MongoDB. The application aims to revolutionize food ordering from a specific restaurant by offering a seamless and intuitive user experience.',
             technologies: 'Technologies used: React Native, JavaScript, Redux, Node.js, Express.js, MongoDB, RESTful APIs',
             duration: '06/2024 - Present',
-            link: '' // Add your project link here
+            link: ''
         },
-        // Add more projects as needed
     ];
     
     

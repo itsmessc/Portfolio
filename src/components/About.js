@@ -1,6 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Button } from 'react-bootstrap';
-import './About.css'; // Custom CSS for styling
+import './About.css'; 
 
 const skillsList = {
     "Languages": ["JavaScript", "Java", "Dart","C"],

@@ -42,19 +42,19 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <ScrollLink to="home" className="nav-link" smooth={true} duration={800}>Home</ScrollLink>
+                            <ScrollLink to="home" className="nav-link"  duration={800}>Home</ScrollLink>
                         </li>
                         <li className="nav-item">
-                            <ScrollLink to="about1" className="nav-link" smooth="easeIn" duration={600} delay={0} offset={-100}>About</ScrollLink>
+                            <ScrollLink to="about1" className="nav-link"  duration={800} delay={0} offset={-100}>About</ScrollLink>
                         </li>
                         <li className="nav-item">
-                            <ScrollLink to="projects" className="nav-link" smooth={true} duration={800}  offset={-70}> Projects</ScrollLink>
+                            <ScrollLink to="projects" className="nav-link"  duration={800}  offset={-70}> Projects</ScrollLink>
                         </li>
                         <li className="nav-item">
-                            <ScrollLink to="experience" className="nav-link" smooth={true} duration={800} offset={-70}>Experience</ScrollLink>
+                            <ScrollLink to="experience" className="nav-link"  duration={800} offset={-70}>Experience</ScrollLink>
                         </li>
                         <li className="nav-item">
-                            <ScrollLink to="contact" className="nav-link" smooth={true} duration={800} offset={-70}>Contact</ScrollLink>
+                            <ScrollLink to="contact" className="nav-link" duration={800} offset={-70}>Contact</ScrollLink>
                         </li>
                     </ul>
                 </div>
