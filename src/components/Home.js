@@ -41,7 +41,7 @@ const Home = () => {
                     <p className="hero-description">I specialize as a full-stack web and app developer.</p>
                 </div>
             </div>
-            <div class="star"></div>
+            {showArrows && (<div class="star"></div>)}
             <div class="meteor-1"></div>
             <div class="meteor-2"></div>
             <div class="meteor-3"></div>

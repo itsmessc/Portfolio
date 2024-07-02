@@ -12,11 +12,11 @@ export default function Project() {
    
     const projects = [
         {
-            name: 'Expense Tracker',
-            description: 'Developed a Flutter app with Firebase for tracking expenses and managing budgets. Features include intuitive UI, PIN security, dark theme, notifications, cloud sync, and a Recycle Bin for deleted items.',
-            technologies: 'Technologies used: Dart, Flutter, Firebase',
-            duration: '02/2024 - 03/2024',
-            link: 'https://github.com/saicharan1342/Expense-tracker' 
+            name: 'Restaurant Food Ordering App',
+            description: 'Currently spearheading the development of a cutting-edge mobile application using React Native, complemented by a robust backend powered by Node.js, Express, and MongoDB. The application aims to revolutionize food ordering from a specific restaurant by offering a seamless and intuitive user experience.',
+            technologies: 'Technologies used: React Native, JavaScript, Redux, Node.js, Express.js, MongoDB, RESTful APIs',
+            duration: '06/2024 - Present',
+            link: ''
         },
         {
             name: 'Hospital Management System',
@@ -26,12 +26,14 @@ export default function Project() {
             link: 'https://github.com/itsmessc/HMS',
         },
         {
-            name: 'Restaurant Food Ordering App',
-            description: 'Currently spearheading the development of a cutting-edge mobile application using React Native, complemented by a robust backend powered by Node.js, Express, and MongoDB. The application aims to revolutionize food ordering from a specific restaurant by offering a seamless and intuitive user experience.',
-            technologies: 'Technologies used: React Native, JavaScript, Redux, Node.js, Express.js, MongoDB, RESTful APIs',
-            duration: '06/2024 - Present',
-            link: ''
+            name: 'Expense Tracker',
+            description: 'Developed a Flutter app with Firebase for tracking expenses and managing budgets. Features include intuitive UI, PIN security, dark theme, notifications, cloud sync, and a Recycle Bin for deleted items.',
+            technologies: 'Technologies used: Dart, Flutter, Firebase',
+            duration: '02/2024 - 03/2024',
+            link: 'https://github.com/saicharan1342/Expense-tracker' 
         },
+        
+        
     ];
     
     
