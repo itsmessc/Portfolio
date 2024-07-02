@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './projects.css'; 
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCode } from '@fortawesome/free-solid-svg-icons'
 
 
 export default function Project() {
@@ -53,7 +55,7 @@ export default function Project() {
                         date={project.duration}
                         dateClassName="date"
                         iconStyle={{ background: '#1d10aa', color: '#fff' }}      
-                        icon={hoveredProject === index ? <i className="fas fa-code"></i> : <i className="fas fa-briefcase"></i>}
+                        icon= {<FontAwesomeIcon icon={faCode}/>}
                         iconOnClick={() => window.open(project.link, '_blank')}
                         onTimelineElementClick={() => window.open(project.link, '_blank')}
                         iconClassName="icon"
@@ -76,7 +78,7 @@ export default function Project() {
                         <h3 className="vertical-timeline-element-title">{project.name}</h3>
                         <h5 className="vertical-timeline-element-subtitle">{project.technologies}</h5>
                         <p>{project.description}</p>
-                        {project.link ?<p>Click for code</p>:<p></p>}
+                        {project.link ?<p>[Click for source code]</p>:<p></p>}
                     </VerticalTimelineElement>
                 ))}
             </VerticalTimeline>
