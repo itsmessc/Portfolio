@@ -1,3 +1,9 @@
+# My portfolio website
+
+This is my portfolio website. It is built using React and Tailwind CSS and bootsrap. It is hosted on vercel.
+https://portfolio-nine-delta-38.vercel.app/
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
