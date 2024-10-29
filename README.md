@@ -1,7 +1,6 @@
 # My portfolio website
 
 This is my portfolio website. It is built using React and Tailwind CSS and bootsrap. It is hosted on vercel.
-https://saicharan-ten.vercel.app/
 
 
 # Getting Started with Create React App
