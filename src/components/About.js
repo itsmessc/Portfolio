@@ -1,16 +1,16 @@
 import React from 'react';
-import './About.css'; 
+import './About.css';
 
 const skillsList = {
-    "Languages": ["JavaScript", "Java", "Dart","C"],
-    "Frontend": ["HTML", "CSS", "React", "React Native", "Flutter", "JavaFX"],
-    "Backend": ["Node.js", "Express.js","Firebase"],
-    "Databases": ["MongoDB", "SQL", "PostgreSQL"]
-  };
+  "Languages": ["JavaScript", "Java", "Dart", "C"],
+  "Frontend": ["React", "React Native", "Flutter", "JavaFX"],
+  "Backend": ["Node.js", "Express.js", "Firebase"],
+  "Databases": ["MongoDB", "SQL", "PostgreSQL"]
+};
 
 const About = () => {
-    return (
-        <div className="dark-theme" id='about1'>
+  return (
+    <div className="dark-theme" id='about1'>
       <section id="about" className="about-section">
         <div className="container">
           <div className="row">
@@ -43,7 +43,7 @@ const About = () => {
         </div>
       </section>
     </div>
-    );
+  );
 }
 
 export default About;

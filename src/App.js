@@ -7,17 +7,18 @@ import About from './components/About';
 import Projects from './components/projects';
 import ContactForm from './components/Contact';
 import Footer from './components/Footer';
-
+import Experience from './components/Experience';
 function App() {
   return (
     <Router>
       <div>
         <Navbar />
-        <Home/> 
-        <About/> 
-        <Projects/>
-        <ContactForm/>
-        <Footer/>
+        <Home />
+        <About />
+        <Projects />
+        <Experience />
+        <ContactForm />
+        <Footer />
       </div>
     </Router>
   );

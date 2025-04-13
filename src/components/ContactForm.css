@@ -1,53 +1,185 @@
-/* ContactForm.css */
+.contact-section {
+    padding: 5rem 2rem;
+    background: #000000;
+    /* Black background */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-container {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+}
 
 .contact-form {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 600px;
-    margin: 0 auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background: #1c2526;
+    /* Dark blue-gray card */
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    color: #e0f7fa;
+    /* Light cyan-blue */
+    transition: transform 0.3s ease;
+}
+
+.contact-form:hover {
+    transform: translateY(-8px);
 }
 
 .contact-form h2 {
+    font-size: 2.5rem;
+    color: #4682b4;
+    /* Muted steel blue */
     text-align: center;
-        background: #0237FF;
-    background: linear-gradient(to bottom right, #0237FF 4%, #FF7672 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: bold;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    position: relative;
+}
+
+.contact-form h2::after {
+    content: '';
+    width: 60px;
+    height: 3px;
+    background: #87ceeb;
+    /* Sky blue */
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.form-label {
+    font-size: 1.1rem;
+    color: #b0c4de;
+    /* Light slate blue */
+    margin-bottom: 0.5rem;
 }
 
 .form-control {
-    background-color: #555;
-    color: #fff;
-    border: 1px solid #888;
+    background: #263a5b;
+    /* Darker blue */
+    color: #e0f7fa;
+    /* Light cyan-blue */
+    border: 1px solid #4682b4;
+    /* Muted steel blue */
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, background 0.3s ease;
 }
 
 .form-control:focus {
-    background-color: #666;
-    color: #fff;
-    border-color: #aaa;
-    box-shadow: none;
+    background: #2f4f8f;
+    /* Slightly lighter blue */
+    border-color: #1e90ff;
+    /* Royal blue */
+    color: #e0f7fa;
+    box-shadow: 0 0 8px rgba(30, 144, 255, 0.3);
+    /* Royal blue glow */
+    outline: none;
 }
 
-.btn-outline-light {
-    color: #fff;
-    border-color: #fff;
+.form-control::placeholder {
+    color: #78909c;
+    /* Muted blue-gray */
 }
 
-.btn-outline-light:hover {
-    background-color: #555;
-    border-color: #fff;
+textarea.form-control {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: #1e90ff;
+    /* Royal blue */
+    color: #e0f7fa;
+    /* Light cyan-blue */
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #1565c0;
+    /* Darker royal blue */
+    transform: translateY(-2px);
+}
+
+.alert {
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.alert-success {
+    background: #263a5b;
+    /* Darker blue */
+    color: #87ceeb;
+    /* Sky blue */
+    border: 1px solid #4682b4;
+    /* Muted steel blue */
+}
+
+.alert-danger {
+    background: #4a2526;
+    /* Dark red-gray for contrast */
+    color: #ff8787;
+    /* Light red */
+    border: 1px solid #b44646;
 }
 
 .social-links {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    gap: 1rem;
+    margin-top: 1.5rem;
 }
 
-.social-links .btn {
-    margin: 0 10px;
+.social-btn {
+    padding: 10px 20px;
+    background: #263a5b;
+    /* Darker blue */
+    color: #e0f7fa;
+    /* Light cyan-blue */
+    border: 1px solid #4682b4;
+    /* Muted steel blue */
+    border-radius: 8px;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+
+.social-btn:hover {
+    background: #1e90ff;
+    /* Royal blue */
+    border-color: #1e90ff;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .contact-form h2 {
+        font-size: 2rem;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+    }
+
+    .form-label {
+        font-size: 1rem;
+    }
+
+    .submit-btn {
+        font-size: 1rem;
+    }
 }

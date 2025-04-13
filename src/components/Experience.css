@@ -1,0 +1,141 @@
+.experience-section {
+    padding: 5rem 2rem;
+    background: #000000;
+    /* Pure black background */
+    color: #e0f7fa;
+    /* Light cyan-blue for text */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    color: #4682b4;
+    /* Muted steel blue */
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative;
+    text-align: center;
+}
+
+.section-title::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background: #87ceeb;
+    /* Sky blue */
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+.experience-card {
+    background: #1c2526;
+    /* Dark blue-gray for contrast */
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    /* Subtle shadow */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.experience-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #4682b4, #1e90ff);
+    /* Steel to royal blue */
+    transition: height 0.4s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.experience-card:hover::before {
+    height: 6px;
+}
+
+.role {
+    font-size: 1.7rem;
+    margin-bottom: 0.75rem;
+    color: #87ceeb;
+    /* Sky blue */
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.company {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #e0f7fa;
+    /* Light cyan-blue */
+    font-weight: 500;
+}
+
+.duration {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #78909c;
+    /* Muted blue-gray */
+    font-style: italic;
+}
+
+.description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #b0c4de;
+    /* Light slate blue */
+    text-align: left;
+}
+
+.icon {
+    font-size: 2.5rem;
+    color: #1e90ff;
+    /* Royal blue for pop */
+    margin-bottom: 1rem;
+    display: block;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .experience-card {
+        padding: 1.5rem;
+    }
+
+    .role {
+        font-size: 1.4rem;
+    }
+
+    .company {
+        font-size: 1.1rem;
+    }
+}
